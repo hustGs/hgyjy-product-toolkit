@@ -12,6 +12,7 @@
     "shortDescription": "故事地图与旅程图双件套",
     "longDescription": "面向产品设计人员的双图工具包。用户故事地图把一个原始需求按七要素结构化，方案拆成用户旅程骨干，功能特性落到 Who/What/When/Why/DoD，支持 MoSCoW 优先级与版本泳道，输出自包含 HTML 地图；用户旅程图按 NNGroup 五要素梳理角色×场景体验，逐阶段填写行动、触点、想法、情绪、痛点、机会点并强制标注事实与假设，绘制情绪曲线与关键时刻。旅程图的机会点可一键导入为故事地图的功能特性草稿，体验诊断结论直接衔接需求拆解与版本排期。状态全程落盘为 JSON 单一事实源，脚本校验原子执行，随时重渲染。",
     "developerName": "hgyjy",
+    "iconUrl": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.31.0/icons/outline/map-2.svg",
     "category": "PRODUCTIVITY",
     "tryPrompts": [
       "帮我梳理一个原始需求并做用户故事地图",
