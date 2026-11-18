@@ -1,0 +1,21 @@
+{
+  "displayName": "hgyjy Product Toolkit",
+  "shortDescription": "Story map plus journey map duo",
+  "longDescription": "A twin-map toolkit for product designers. The user story map structures a raw requirement into seven fields, splits the solution into a journey backbone, and grounds each feature in Who/What/When/Why/DoD with MoSCoW priority and release swimlanes, rendered as a self-contained HTML map. The user journey map analyzes a persona-by-scenario experience following the NNGroup model, filling in actions, touchpoints, thoughts, emotion, pain points and opportunities per stage with mandatory fact/hypothesis labeling, plus an emotional curve and moments of truth. Opportunities found in a journey map can be imported as feature drafts in the story map, connecting experience diagnosis directly to requirement breakdown and release planning. State is persisted in a single JSON source of truth, validated and applied atomically by scripts, and re-renderable at any time.",
+  "developerName": "hgyjy",
+  "tryPrompts": [
+    "Map out a raw requirement into a user story map",
+    "Analyze this persona's user journey in this scenario",
+    "Import journey-map opportunities into the story map"
+  ],
+  "skillOverrides": {
+    "hgyjy-user-story": {
+      "displayName": "User Story Map",
+      "description": "Structuring raw requirements into a journey backbone with features and release planning"
+    },
+    "hgyjy-user-journey": {
+      "displayName": "User Journey Map",
+      "description": "Mapping persona-by-scenario experience with fact/hypothesis labels, emotional curve and moments of truth"
+    }
+  }
+}
