@@ -1,0 +1,39 @@
+{
+  "name": "hgyjy-product-toolkit",
+  "version": "1.0.1",
+  "description": "对话式用户故事地图与用户旅程图工具包：原始需求拆解、版本规划、体验诊断一体化，支持旅程图结论一键导入故事地图",
+  "keywords": ["用户故事地图", "用户旅程图", "需求拆解", "产品规划", "user story map", "user journey map"],
+  "author": "hgyjy",
+  "license": "MIT",
+  "skills": "./skills/",
+  "skillInstructions": "本插件包含两个技能，按需加载，互不依赖：\n1. hgyjy-user-story（用户故事地图）：当用户要梳理原始需求、做需求拆解与版本规划时使用。一张地图对应一个原始需求（七要素），方案拆成用户旅程骨干，功能特性带 Who/What/When/Why/DoD 与优先级/版本。所有状态变更必须通过 scripts/update_map.py 的结构化指令完成，禁止直接编辑 story_map.json；渲染用 scripts/render_map.py。\n2. hgyjy-user-journey（用户旅程图）：当用户要分析某角色在某场景下的体验、画情绪曲线、找痛点与机会点时使用。一张图锁定一个角色×一段场景，每阶段内容必须标注事实/假设；状态变更走 scripts/update_journey.py，渲染用 scripts/render_journey.py。\n3. 桥接：旅程图的机会点可经 scripts/import_journey.py 生成故事地图草稿指令，导入前必须向用户转述审阅摘要与待验证清单，确认后再执行。\n4. 所有脚本一律用 python3 显式调用（如 python3 scripts/update_map.py），不要用 ./ 执行。",
+  "interface": {
+    "displayName": "hgyjy 产品工具包",
+    "shortDescription": "故事地图与旅程图双件套",
+    "longDescription": "面向产品设计人员的双图工具包。用户故事地图把一个原始需求按七要素结构化，方案拆成用户旅程骨干，功能特性落到 Who/What/When/Why/DoD，支持 MoSCoW 优先级与版本泳道，输出自包含 HTML 地图；用户旅程图按 NNGroup 五要素梳理角色×场景体验，逐阶段填写行动、触点、想法、情绪、痛点、机会点并强制标注事实与假设，绘制情绪曲线与关键时刻。旅程图的机会点可一键导入为故事地图的功能特性草稿，体验诊断结论直接衔接需求拆解与版本排期。状态全程落盘为 JSON 单一事实源，脚本校验原子执行，随时重渲染。",
+    "developerName": "hgyjy",
+    "iconUrl": "https://cdn.jsdelivr.net/npm/@tabler/icons@3.31.0/icons/outline/map-2.svg",
+    "category": "PRODUCTIVITY",
+    "tryPrompts": [
+      "帮我梳理一个原始需求并做用户故事地图",
+      "分析一下这个角色在这段场景下的用户旅程",
+      "把旅程图的机会点导入成故事地图"
+    ],
+    "brandColor": {
+      "light": "#1783FF",
+      "dark": "#1783FF"
+    },
+    "defaultLocale": "zh-CN",
+    "locales": "./locales/",
+    "skillOverrides": {
+      "hgyjy-user-story": {
+        "displayName": "用户故事地图",
+        "description": "对话式梳理原始需求，按旅程骨干拆解功能特性并规划版本"
+      },
+      "hgyjy-user-journey": {
+        "displayName": "用户旅程图",
+        "description": "按角色×场景梳理体验旅程，标注事实假设，绘制情绪曲线与关键时刻"
+      }
+    }
+  }
+}

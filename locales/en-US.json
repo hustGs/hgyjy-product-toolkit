@@ -1,0 +1,21 @@
+{
+  "displayName": "hgyjy Product Toolkit",
+  "shortDescription": "Story & journey maps",
+  "longDescription": "A twin-map toolkit for product designers. The story map structures a raw requirement into seven fields, splits the solution into a journey backbone, and grounds each feature in Who/What/When/Why/DoD with priority tiers and release swimlanes. The journey map maps one persona in one scenario: per-stage actions, touchpoints, thoughts, emotion, pain points and opportunities, with fact/hypothesis labels, an emotion curve and key moments. Journey opportunities import as story-map feature drafts.",
+  "developerName": "hgyjy",
+  "tryPrompts": [
+    "Map out a raw requirement into a user story map",
+    "Analyze this persona's user journey in this scenario",
+    "Import journey-map opportunities into the story map"
+  ],
+  "skillOverrides": {
+    "hgyjy-user-story": {
+      "displayName": "User Story Map",
+      "description": "Structuring raw requirements into a journey backbone with features and release planning"
+    },
+    "hgyjy-user-journey": {
+      "displayName": "User Journey Map",
+      "description": "Mapping persona-by-scenario experience with fact/hypothesis labels, emotional curve and moments of truth"
+    }
+  }
+}
