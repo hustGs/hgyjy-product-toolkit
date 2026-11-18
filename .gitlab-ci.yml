@@ -25,12 +25,10 @@ package:
     - python3 ci/validate.py
     - VERSION=$(python3 -c "import json; print(json.load(open('kimi.plugin.json'))['version'])")
     - mkdir -p dist
-    # .kplugin 即 zip 包：manifest + locales + skills，排除仓库与 CI 自身文件
-    - cd .. && zip -r "hgyjy-product-toolkit/dist/hgyjy-product-toolkit-${VERSION}.kplugin"
-      "hgyjy-product-toolkit" -x "hgyjy-product-toolkit/.git/*"
-      "hgyjy-product-toolkit/.gitlab-ci.yml" "hgyjy-product-toolkit/ci/*"
-      "hgyjy-product-toolkit/dist/*" "hgyjy-product-toolkit/README.md"
-      && cd hgyjy-product-toolkit
+    # .kplugin 即 zip 包：manifest + locales + skills，文件位于压缩包根部
+    # （发布平台要求 kimi.plugin.json 在根），排除仓库与 CI 自身文件
+    - zip -r "dist/hgyjy-product-toolkit-${VERSION}.kplugin" . -x ".git/*"
+      "ci/*" ".gitlab-ci.yml" "dist/*" "README.md"
     - unzip -l "dist/hgyjy-product-toolkit-${VERSION}.kplugin"
   artifacts:
     paths:

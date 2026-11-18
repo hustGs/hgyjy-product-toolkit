@@ -36,7 +36,7 @@ WorkBuddy 也可走 UI：技能面板 → 添加技能 → 上传技能，分别
 ## 版本管理
 
 - manifest 版本（`kimi.plugin.json` 的 `version`）是唯一发布版本号，必须与 git tag 一致（tag `v1.0.0` ↔ version `1.0.0`），CI 会强制校验。
-- 每次发布：改 `version` → 打同号 tag 推送 → CI 自动打包 `.kplugin` 并创建 GitLab Release（制品附加其中）。
+- 每次发布：改 `version` → 打同号 tag 推送 → CI 自动打包 `.kplugin` 并创建 Release（GitHub / GitLab 行为一致，制品附加其中，manifest 位于压缩包根部）。
 - 发插件新版本：`publish_user_plugin` 发布后用插件页「版本历史」选择切换。
 
 ## 目录结构
@@ -46,5 +46,6 @@ kimi.plugin.json      # 插件 manifest（version 字段即发布版本）
 locales/en-US.json    # 界面英文文案（manifest 正文为 zh-CN）
 skills/<skill>/       # SKILL.md + scripts/ + references/ + LICENSE
 ci/validate.py        # CI 校验：manifest/版本/tag 一致性
-.gitlab-ci.yml        # validate + tag 打包 Release
+.gitlab-ci.yml        # validate + tag 打包 Release（GitLab）
+.github/workflows/ci.yml  # 同行为 GitHub Actions 版
 ```
