@@ -13,7 +13,22 @@ hgyjy 产品工具包 —— 用户故事地图 × 用户旅程图双件套（Ki
 
 ## 使用
 
-在 Kimi 插件页 → **自定义** → **我创建的** 中安装。对话中说出「梳理原始需求」「做用户故事地图」「分析用户旅程」等即触发对应 skill。
+**Kimi**：插件页 → **自定义** → **我创建的** 中安装。对话中说出「梳理原始需求」「做用户故事地图」「分析用户旅程」等即触发对应 skill。
+
+**Claude Code / OpenCode**（SKILL.md 是 Agent Skills 开放标准，直接可用）：
+
+```bash
+bash install.sh                # claude-code + opencode，全局符号链接
+bash install.sh opencode --copy  # 拷贝模式（不跟随符号链接的环境）
+bash install.sh all --project    # 装到当前项目（随仓库走，团队共享）
+```
+
+| 工具 | 全局发现路径 | 项目级 |
+|------|-------------|--------|
+| Claude Code | `~/.claude/skills/<name>/` | `.claude/skills/<name>/` |
+| OpenCode | `~/.config/opencode/skills/<name>/`（兼容 `~/.claude/skills/`） | `.opencode/skills/<name>/`（兼容 `.claude/skills/`） |
+
+注意：OpenCode 添加 skill 后需**重启会话**才被发现；Kimi 侧的新版本走插件页「版本历史」，这两个工具侧靠 `git pull` + 重装（符号链接模式 pull 即生效）。
 
 ## 版本管理
 
