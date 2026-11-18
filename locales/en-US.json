@@ -1,7 +1,7 @@
 {
   "displayName": "hgyjy Product Toolkit",
   "shortDescription": "Story & journey maps",
-  "longDescription": "A twin-map toolkit for product designers. The story map structures a raw requirement into seven fields, splits the solution into a journey backbone, and grounds each feature in Who/What/When/Why/DoD with MoSCoW priority and release swimlanes. The journey map analyzes a persona-by-scenario experience: actions, touchpoints, thoughts, emotion, pain points and opportunities per stage, with mandatory fact/hypothesis labeling, an emotional curve and moments of truth. Journey-map opportunities import as story-map feature drafts, linking experience diagnosis to release planning. State persists in a single JSON file, applied atomically by scripts and re-renderable anytime.",
+  "longDescription": "A twin-map toolkit for product designers. The story map turns a raw requirement into seven fields, splits the solution into a journey backbone, and grounds each feature in Who/What/When/Why/DoD with MoSCoW priorities and release swimlanes. The journey map captures a persona-by-scenario experience per stage: actions, touchpoints, thoughts, emotion, pain points and opportunities, with fact/hypothesis labels, an emotional curve and moments of truth. Journey-map opportunities import as story-map feature drafts. State lives in one JSON file, applied atomically by scripts and re-renderable anytime.",
   "developerName": "hgyjy",
   "tryPrompts": [
     "Map out a raw requirement into a user story map",
