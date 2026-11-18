@@ -15,11 +15,11 @@ hgyjy 产品工具包 —— 用户故事地图 × 用户旅程图双件套（Ki
 
 **Kimi**：插件页 → **自定义** → **我创建的** 中安装。对话中说出「梳理原始需求」「做用户故事地图」「分析用户旅程」等即触发对应 skill。
 
-**Claude Code / OpenCode**（SKILL.md 是 Agent Skills 开放标准，直接可用）：
+**Claude Code / OpenCode / WorkBuddy**（SKILL.md 是 Agent Skills 开放标准，直接可用）：
 
 ```bash
-bash install.sh                # claude-code + opencode，全局符号链接
-bash install.sh opencode --copy  # 拷贝模式（不跟随符号链接的环境）
+bash install.sh                  # claude-code + opencode + workbuddy，全局符号链接
+bash install.sh workbuddy --copy # 拷贝模式（不跟随符号链接的环境）
 bash install.sh all --project    # 装到当前项目（随仓库走，团队共享）
 ```
 
@@ -27,8 +27,11 @@ bash install.sh all --project    # 装到当前项目（随仓库走，团队共
 |------|-------------|--------|
 | Claude Code | `~/.claude/skills/<name>/` | `.claude/skills/<name>/` |
 | OpenCode | `~/.config/opencode/skills/<name>/`（兼容 `~/.claude/skills/`） | `.opencode/skills/<name>/`（兼容 `.claude/skills/`） |
+| WorkBuddy | `~/.workbuddy/skills/<name>/` | `.workbuddy/skills/<name>/` |
 
-注意：OpenCode 添加 skill 后需**重启会话**才被发现；Kimi 侧的新版本走插件页「版本历史」，这两个工具侧靠 `git pull` + 重装（符号链接模式 pull 即生效）。
+WorkBuddy 也可走 UI：技能面板 → 添加技能 → 上传技能，分别上传两个 skill 目录打的 zip（zip 根目录即 skill 文件夹，SKILL.md 在其根部）。
+
+注意：OpenCode / WorkBuddy 添加 skill 后需**重启会话**才被发现；WorkBuddy 执行 shell 时工作目录不是 skill 目录，脚本调用用 `${CODEBUDDY_SKILL_DIR}` 全路径（两个 SKILL.md 命令参考已注明）；Kimi 侧新版本走插件页「版本历史」，其余工具侧靠 `git pull` + 重装（符号链接模式 pull 即生效）。
 
 ## 版本管理
 

@@ -61,6 +61,8 @@ python3 scripts/render_journey.py --input journey_map.json --output journey_map.
 
 ### update_journey.py — 状态文件增量更新
 
+> 跨工具注意：Kimi / Claude Code / OpenCode 中相对路径可用；WorkBuddy 执行 shell 时工作目录不是 skill 目录，需写全路径——`python3 "${CODEBUDDY_SKILL_DIR:-<skill安装目录>}/scripts/update_journey.py ...`。
+
 ```bash
 # 初始化（已存在则需 --force）
 python3 scripts/update_journey.py --file journey_map.json \

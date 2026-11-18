@@ -1,6 +1,6 @@
 {
   "name": "hgyjy-product-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "对话式用户故事地图与用户旅程图工具包：原始需求拆解、版本规划、体验诊断一体化，支持旅程图结论一键导入故事地图",
   "keywords": ["用户故事地图", "用户旅程图", "需求拆解", "产品规划", "user story map", "user journey map"],
   "author": "hgyjy",

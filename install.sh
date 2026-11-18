@@ -33,12 +33,14 @@ dest_for() {
     case "$tool" in
       claude-code) echo "$PWD/.claude/skills" ;;
       opencode)    echo "$PWD/.opencode/skills" ;;
+      workbuddy)   echo "$PWD/.workbuddy/skills" ;;
       codex)       echo "$PWD/.agents/skills" ;;
     esac
   else
     case "$tool" in
       claude-code) echo "$HOME/.claude/skills" ;;
       opencode)    echo "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills" ;;
+      workbuddy)   echo "$HOME/.workbuddy/skills" ;;
       codex)       echo "$HOME/.agents/skills" ;;
     esac
   fi
@@ -61,9 +63,9 @@ install_one() {
 }
 
 case "$TARGETS" in
-  all)        tools=(claude-code opencode) ;;
-  claude-code|opencode|codex) tools=("$TARGETS") ;;
-  *) echo "未知目标: $TARGETS（可选 claude-code / opencode / codex / all）"; exit 1 ;;
+  all)        tools=(claude-code opencode workbuddy) ;;
+  claude-code|opencode|workbuddy|codex) tools=("$TARGETS") ;;
+  *) echo "未知目标: $TARGETS（可选 claude-code / opencode / workbuddy / codex / all）"; exit 1 ;;
 esac
 
 echo "安装 skills: ${SKILLS[*]} → ${tools[*]} ($SCOPE, $MODE)"

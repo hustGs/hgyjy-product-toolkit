@@ -81,6 +81,8 @@ python3 scripts/update_map.py --file story_map.json --changes "$(cat draft_ops.j
 
 ## 命令参考
 
+> 跨工具注意：Kimi / Claude Code / OpenCode 中相对路径可用；WorkBuddy 执行 shell 时工作目录不是 skill 目录，需写全路径——`python3 "${CODEBUDDY_SKILL_DIR:-<skill安装目录>}/scripts/update_map.py ...`（`${CODEBUDDY_SKILL_DIR}` 为 WorkBuddy 注入的 skill 目录绝对路径）。
+
 ```bash
 # 变更（--changes 缺省从 stdin 读；init 必须单独一条）
 python3 scripts/update_map.py --file story_map.json --changes '[{"op":"add_journey","name":"上料"}]'
