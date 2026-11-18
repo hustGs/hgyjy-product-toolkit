@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """hgyjy-product-toolkit CI 校验。
 
-检查项:
+检查项：
   1. kimi.plugin.json 可解析，name/version/description 合法
   2. version 为完整 x.y.z（可带 -rc.N 预发布后缀）
   3. interface 必填槽位齐全（displayName/shortDescription/longDescription/
